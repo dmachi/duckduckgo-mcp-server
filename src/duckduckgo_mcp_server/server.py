@@ -133,9 +133,6 @@ class DuckDuckGoSearcher:
             await ctx.info(f"Successfully found {len(results)} results")
             return results
 
-        except httpx.TimeoutException:
-            await ctx.error("Search request timed out")
-            return []
         except httpx.HTTPError as e:
             await ctx.error(f"HTTP error occurred: {str(e)}")
             return []
