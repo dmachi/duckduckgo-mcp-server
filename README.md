@@ -33,6 +33,10 @@ Install directly from PyPI using `uv`:
 ```bash
 uv pip install duckduckgo-mcp-server
 ```
+### Installing via `Docker`
+```bash
+docker build . -t duckduckgo-mcp-server:latest
+```
 
 ## Usage
 
