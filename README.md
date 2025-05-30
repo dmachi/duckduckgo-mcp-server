@@ -125,6 +125,28 @@ Cleaned and formatted text content from the webpage.
 - Detailed logging through MCP context
 - Graceful degradation on rate limits or timeouts
 
+## Publishing to GitHub Container Registry
+
+To publish the Docker image to GitHub Container Registry, follow these steps:
+
+1.  **Build the Docker image:**
+    ```bash
+    docker build -t ghcr.io/scalabresegd/duckduckgo-mcp-server:latest .
+    ```
+    Replace `YOUR_USERNAME` with your GitHub username and `YOUR_REPOSITORY` with your GitHub repository name.
+
+2.  **Log in to GitHub Container Registry:**
+    ```bash
+    echo $CR_PAT | docker login ghcr.io -u scalabreseGD --password-stdin
+    ```
+    Replace `CR_PAT` with your Personal Access Token (PAT) that has `write:packages` scope. Replace `USERNAME` with your GitHub username.
+
+3.  **Push the Docker image:**
+    ```bash
+    docker push ghcr.io/scalabresegd/duckduckgo-mcp-server:latest
+    ```
+    Again, replace `YOUR_USERNAME` and `YOUR_REPOSITORY` accordingly.
+
 ## Contributing
 
 Issues and pull requests are welcome! Some areas for potential improvement:
