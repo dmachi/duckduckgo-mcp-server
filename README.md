@@ -131,7 +131,7 @@ To publish the Docker image to GitHub Container Registry, follow these steps:
 
 1.  **Build the Docker image:**
     ```bash
-    docker build -t ghcr.io/scalabresegd/duckduckgo-mcp-server:latest .
+    docker buildx build --platform linux/amd64 -t ghcr.io/scalabresegd/duckduckgo-mcp-server:latest .
     ```
     Replace `YOUR_USERNAME` with your GitHub username and `YOUR_REPOSITORY` with your GitHub repository name.
 
