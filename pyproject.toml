@@ -1,6 +1,6 @@
 [project]
 name = "duckduckgo-mcp-server-maintained"
-version = "0.1.1"
+version = "0.1.2"
 description = "MCP Server for searching via DuckDuckGo (Maintained Fork)"
 readme = "README.md"
 authors = [
