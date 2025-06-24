@@ -1,4 +1,8 @@
-# DuckDuckGo Search MCP Server
+# DuckDuckGo Search MCP Server (Maintained Fork)
+
+> **This is a maintained fork** of the original [duckduckgo-mcp-server](https://github.com/nickclyde/duckduckgo-mcp-server) by [Nick Clyde](https://github.com/nickclyde). 
+>
+> **Why this fork?** This version includes updated dependencies, enhanced features, active maintenance, and improved release automation while maintaining full compatibility with the original.
 
 [![smithery badge](https://smithery.ai/badge/@nickclyde/duckduckgo-mcp-server)](https://smithery.ai/server/@nickclyde/duckduckgo-mcp-server)
 
@@ -7,6 +11,14 @@ A Model Context Protocol (MCP) server that provides web search capabilities thro
 <a href="https://glama.ai/mcp/servers/phcus2gcpn">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/phcus2gcpn/badge" alt="DuckDuckGo Server MCP server" />
 </a>
+
+## What's New in This Fork
+
+- 🔄 **Active Maintenance**: Regular updates and dependency management
+- 🚀 **Enhanced Release Process**: Automated publishing to PyPI, Docker, and GitHub Releases
+- 🛡️ **Security Updates**: Latest dependency versions with security patches
+- 📦 **Multi-Platform Support**: Docker images for AMD64 and ARM64
+- 🔧 **Developer Experience**: Improved tooling and documentation
 
 ## Features
 
@@ -31,8 +43,9 @@ npx -y @smithery/cli install @nickclyde/duckduckgo-mcp-server --client claude
 Install directly from PyPI using `uv`:
 
 ```bash
-uv pip install duckduckgo-mcp-server
+uv pip install duckduckgo-mcp-server-maintained
 ```
+
 ### Installing via `Docker`
 ```bash
 docker build . -t duckduckgo-mcp-server:latest
@@ -54,7 +67,7 @@ Add the following configuration:
     "mcpServers": {
         "ddg-search": {
             "command": "uvx",
-            "args": ["duckduckgo-mcp-server"]
+            "args": ["duckduckgo-mcp-server-maintained"]
         }
     }
 }
@@ -147,6 +160,14 @@ To publish the Docker image to GitHub Container Registry, follow these steps:
     ```
     Again, replace `YOUR_USERNAME` and `YOUR_REPOSITORY` accordingly.
 
+## Original Project
+
+This fork is based on the excellent work by [Nick Clyde](https://github.com/nickclyde). Please consider:
+
+- ⭐ **Star the original repo**: [nickclyde/duckduckgo-mcp-server](https://github.com/nickclyde/duckduckgo-mcp-server)
+- 🙏 **Give credit**: When using this fork, please mention both projects
+- 🤝 **Contribute upstream**: Consider contributing improvements to the original project when possible
+
 ## Contributing
 
 Issues and pull requests are welcome! Some areas for potential improvement:
@@ -156,6 +177,11 @@ Issues and pull requests are welcome! Some areas for potential improvement:
 - Caching layer for frequently accessed content
 - Additional rate limiting strategies
 
+When contributing, please:
+1. Test your changes thoroughly
+2. Update documentation as needed  
+3. Consider if the improvement should also go to the original project
+
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License, same as the original project.
