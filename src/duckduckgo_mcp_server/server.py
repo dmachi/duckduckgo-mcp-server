@@ -239,7 +239,7 @@ async def fetch_content(url: str, ctx: Context) -> str:
 
 
 def main():
-    mcp.run(transport="http", host="127.0.0.1", port=8000, path="/mcp")
+    mcp.run(transport="stdio")
 
 
 if __name__ == "__main__":
